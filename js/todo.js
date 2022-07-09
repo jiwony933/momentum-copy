@@ -60,5 +60,4 @@ if (savedTodos !== null) {
   //   parsedTodos.forEach((item) => console.log("say hello" + item));
   todos = parsedTodos;
   parsedTodos.forEach(paintTodo);
-  //   commit test
 }
