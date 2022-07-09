@@ -4,7 +4,7 @@ const todoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "todos";
 
-const todos = [];
+let todos = [];
 // 뭐든지 텍스트로 만들어 주는 JSON.stringify()
 // stringfy된 값을 js가 인식할 수 있게 하는  parse
 function saveTodos() {
@@ -56,6 +56,9 @@ console.log(savedTodos);
 if (savedTodos !== null) {
   //문자열로 변환된 것을 활용할 수 있는 array로 만들어주기 (parse)
   const parsedTodos = JSON.parse(savedTodos);
-  //parse된 배열의 각각의 요소에 함수 적용 (arrow function사용)
-  parsedTodos.forEach((item) => console.log("say hello" + item));
+  //parse된 배열의 각각의 요소에 함수 적용 (foreach, arrow function사용)
+  //   parsedTodos.forEach((item) => console.log("say hello" + item));
+  todos = parsedTodos;
+  parsedTodos.forEach(paintTodo);
+  //   commit test
 }
